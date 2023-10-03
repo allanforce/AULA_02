@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root {
+    --cor-primaria: #000000;
+    --cor-secundaria: #f6f6f6;
+    --cor-terciaria: #22d4fd;
+    --cor-hover: #272727;
+    --fonte-primaria: 'Krona One', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+}
+
+* { /* usar um seletor '*', reset todas as margens e preenchimentos*/
+    margin: 0; /*define as margens de todos os lados do elemento como zero*/
+    padding: 0; /*define o preenchimento de todos os lados do elemento como zero*/
+}
+
+body {
+    /* height: 100vh define a altura do elemento como 100% da altura do viewport */
+    box-sizing: border-box; /*define o modelo de caixa como "border-box" para incluir a borda e o preenchimento na largura/altura total*/
+    background-color: var(--cor-primaria); /*define a cor de fundo*/
+    color: var(--cor-secundaria); /*define a cor do texto*/
+}
+
+.cabecalho {
+    padding: 2% 0% 0% 15%;
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 80px; /*5rem - 80px */
+}
+
+.cabecalho__menu__link {
+    font-family: var(--fonte-secundaria);
+    font-size: 24px; /*1.5rem - 24px */
+    font-weight: 600;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+}
+
+strong {
+    color: var(--cor-terciaria); /*define a cor do texto*/
+    font-style: italic; /*aplica estilo italico ao texto */
+}
+
+.apresentacao {
+    padding: 2% 10%; /*isso cria uma espaçamento dentro da borda do proprio elemento*/
+    display: flex; /*permite que seus filhos sejam organizados em layout flexivel*/
+    align-items: flex-start; /*alinha os itens na vertical ou horizontal*/
+    justify-content: space-between; /*distribui o espaço na horizontal entre os itens com espaço maximo entre eles*/
+    gap: 82px;
+}
+
+.apresentacao__conteudo {
+    width: 50%; /* 615px - define a largura do elemento*/
+    display: flex; /*define o elemento como um conteiner flexivel*/
+    flex-direction: column; /*define a direçao dos itens filhos para coluna*/
+    gap: 3.13rem; /* 50px - define um espaço de '50px' entre os itens filhos*/
+}
+
+.apresentacao__conteudo__titulo {
+    font-size: 2.25rem; /* 36px - define o tamanho da fonte*/
+    font-family: var(--fonte-primaria); /*define a familia da fonte, caso nao disponivel, sera usado sans-serif generica*/
+}
+
+.titulo-destaque {
+    color: var(--cor-terciaria); /*define a cor do texto*/
+}
+
+.apresentacao__conteudo__texto {
+    font-size: 1.5rem; /* 24px - define o tamanho da fonte*/
+    font-family: var(--fonte-secundaria); /*define a familia da fonte, caso nao disponivel, sera usado sans-serif generica*/
+    
+}
+
+.apresentacao__conteudo__texto a {
+    text-decoration: none;
+    color: var(--cor-terciaria);
+    border-radius: 0%;
+    text-align: justify;
+}
+
+.apresentacao__links {
+    display: flex; /*define o modelo de layout como 'flex para o elemento pai'*/
+    flex-direction: column; /*define a direçao dos elementos filhos. ex. em coluna*/
+    align-items: center; /*alinha os elementos na vertical ou horizontal*/
+    gap: 2rem; /* 32px - define um espaçamento entre os itens filhos*/
+    justify-content: space-between; /*distribui o espaço igual entre os elementos, deixando espaço maximo entre eles*/
+}
+
+.apresentacao__links__subtitulo {
+
+    font-family: var(--fonte-primaria);
+    font-size: 1.5rem; /*24px*/
+    font-weight: 400;
+}
+
+.apresentacao__links__botao {
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /*16px*/
+    width: 50%; /* 23.63rem - 378px - define a largura do elemento.*/
+    text-align: center; /*centraliza o texto na horizontal do elemento*/
+    border-radius: 0.5rem; /* 8px - bordas com arredondamento*/
+    border: 2px solid var(--cor-terciaria);
+    font-size: 1.5rem; /* 24px - tamanho da fonte ex. 24px.*/
+    font-weight: 600; /*negrito*/
+    padding: 1rem; /* 16px - borda superior e inferior em 16px e esquerdo e direito em automatico ex. 0.*/
+    text-decoration: none; /*remove a decoraçao do link(sublinhado)*/
+    color: var(--cor-secundaria); /*define a cor do texto ex.black*/
+    font-family: var(--fonte-secundaria); /*define a familia de fontes como 'Montserrat' e, se nao disponivel, usa uma fonte sans-serif generica*/
+}
+
+.apresentacao__links__botao:hover {
+    background-color: var(--cor-hover);
+    padding: 3%;
+}
+
+.rodape {
+    padding: 1rem; /* 24px */
+    color: var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+    text-align: center;
+    font-weight: 400;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem; /* 24px */
+
+}
+
+.apresentacao__imagem, .apresentacao__imagem__2, .apresentacao__imagem__3 {
+    width: 50%;
+    display: flex;
+    padding: 2%;
+    transition: transform 0s;
+}
+
+@media (max-width: 1000px) {
+    .body {
+        margin: 5%;
+    }
+
+    .cabecalho {
+        padding: 10% 5%;
+        justify-content: center;
+    
+    }
+
+    .cabecalho__menu {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cabecalho__menu__link {
+        padding: 0%;
+        text-align:justify;      
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .apresentacao__conteudo {
+        width: auto;
+    }
+
+    .apresentacao__imagem, .apresentacao__imagem__2, .apresentacao__imagem__3 {
+        width: 90%;
+        justify-content:space-between;
+        padding: 2%;
+        transition: none;
+    }
+}
